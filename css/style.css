@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+:root {
+    --dark-color: rgba(30, 8, 153, 0.733);
+    --medium-color: #333;
+    --ligh-color: rgba(211, 68, 199, 0.925);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Akaya Telivigala', cursive; 
+}
+
+body {
+color: var(--ligh-color);
+padding: 3rem;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, var(--ligh-color), var(--dark-color)), url("../img/Space.jpg");
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 1% 100%);
+}
+
+.header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.heading-primary {
+    text-transform: uppercase;
+}
+
+.heading-pimary--main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    animation:moveInFromLeft 3s ease-out;
+}
+
+@keyframes moveInFromLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.heading-primary--sub{
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.3rem;
+    animation: moveInFromRight 3s ease-out;
+}
+
+@keyframes moveInFromRight{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80%{
+        transform: translateX(-1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn--head{
+    display: block;
+    text-decoration: none;
+    border: 3px solid var(--dark-color);
+    color: var(--medium-color);
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 2rem;
+    margin: 2rem auto -15rem auto;
+    animation: fadeIn 3s;
+    transition: transform 0.8s ease-in-out;
+}
+
+.btn--head:hover{
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
